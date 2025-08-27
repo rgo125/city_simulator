@@ -1,0 +1,21 @@
+    For my final, I created an economic simulation. The simulation does not take in any user input besides the ability
+to speed it up or slow it down, which is done so by pressing the RIGHT ARROW KEY to speed it up and LEFT ARROW KEY to slow
+it down.
+    The simulation contains 5 companies. 2 of which, the construction and delivery company, do not have physical buildings.
+The auto company, real estate company and food company have physical buildings. The auto and real estate companies produce
+products which they sell (cars and apartments respectively). The food company has no other functionality besides the basic
+functionality that all building companies have. That functionality is the ability to order building blocks from the delivery
+company, that represent raw material which is added to their buildings and also paying the construction company to turn
+each building block into a part of the building. The construction and delivery company both hire workers to do these
+tasks for them. When workers are hired by the delivery company they walk off screen to the left, since that is where the
+delivery company is located. When they get to their destination they get in a delivery truck and begin delivering blocks
+to the companies that have ordered them. Once those are dropped off, the workers working for the construction company
+receive a hammer and begin hammering each block, turning it into a "worked" block. Each worked block can be thought of as
+an apartment building for the real estate company or an office space for the other two companies. With apartments now
+available, the real estate company can rent out to workers who have received money from their employers. The simulation
+cycles between day and night, and if a worker is renting an apartment they go home at night. Similarly the auto company
+sells cars to workers. If a worker has enough money and doesn't already own a car, they will buy one. After that, whenever
+they are moving around, a car will be displayed rather than a walking person. Eventually, however, the simulation will
+experience market saturation. Once everyone owns a car and an apartment, the companies will no longer make any money
+since no one will buy what they have. A trickle down effect occurs in which the companies stop paying for delivery
+and construction and so there are no jobs available, and the population ends up unemployed. The system has failed. :(
