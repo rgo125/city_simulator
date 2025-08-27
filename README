@@ -1,0 +1,34 @@
+The main algorithm used in this simulation is the hiring system. It includes many methods. Each worker has a random
+level of productivity between 20 and 30 when they start off. In the diminishMargProd method included in the Company
+superclass, each additional Worker that is added to a company's list of employees has some productivity taken away.
+This is done by subtracting the Worker's index number, within the employees list, from their original productivity.
+A worker's value is determined by their productivity * their employers product price as is seen in the same diminishMargProd
+method.
+
+The company then decides whether or not they should hire more workers by comparing the worker's value to the current
+hourlyWage. If the value of the employee with the highest index in the list is greater than the hourlyWage, then this
+means the hiring boolean is set to true. Otherwise, it is set to false. This occurs in the checkWorkerProductivity()
+method in the Company superclass. Companies will also fire any workers whose productivity is lower than the hourlyWage
+as seen in the checkInval() and fireWorkers() methods in the Company superclass. On top of this, companies will adjust
+the hourlyWage and productPrice they offer to fix this. They will lower the wage in order to afford to hire new workers
+as seen in the setWage() method (Company superclass), and they will raise their product price to have the same effect,
+as seen in the setPrice() method (constructionCompany and deliveryCompany subclasses).
+
+This will then effect how likely Workers are to work for a certain company. In the checkJobs() method in the Worker class,
+each Worker checks the wage of the companies that are hiring and if that wage is higher than the wage their current
+employer is giving them, then they quit their job and go work for the better paying company.
+
+Prices are also adjusted by supply and demand, meaning that when a company such as the constructionCompany has a lot of
+clients, they will raise the price. If they have no clients, they lower the price in order for the clients to be able to
+afford the service. This is seen in the setPrice() method.
+
+Some known bugs include;
+-Workers sometimes stop moving randomly, but this usually fixes itself after a bit
+-The real estate company's building (brick building in the middle) doesn't always display all the Workers that are home
+at nighttime
+
+Debugging collaborators:
+Dolaniyi
+
+I spent a few hundred hours on this project and I feel very proud and happy with how it turned out, I hope you like it
+too :)
